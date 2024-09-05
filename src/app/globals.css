@@ -2,6 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.btn-primary {
+  @apply bg-red-600 rounded font-medium text-center hover:bg-red-700 active:bg-red-800;
+}
+
+.btn-secondary {
+  @apply bg-zinc-600 rounded font-medium text-center hover:bg-zinc-700 active:bg-zinc-800;
+}
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+      display: none;
+  }
+  .no-scrollbar {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+}
+}
+.custom-gradient {
+  background: linear-gradient(to right, 
+    #4b1111, 
+    #ec4899, 
+    #ef4444, 
+    #ef4444, 
+    #ef4444, 
+    #ec4899, 
+    #4b1111  
+  );
+}
+
+
+.custom-radial-gradient {
+  background: radial-gradient(circle at center top, #181835, black);
+  height: 8rem; /* Ajuste a altura conforme necessário */
+}
+
+button,label,a{
+  user-select: none;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -15,6 +54,8 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+
+
 
 body {
   color: rgb(var(--foreground-rgb));
